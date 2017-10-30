@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+  <title>Nuance - Automated Solutions - Candidate Assessment</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+</head>
+<body>
+    <!-- 
+      Most (if not all) of your code should be within this #survey!
+      Please use ./css/main.css and ./js/index.js for additional styles/js 
+      Good luck!
+    -->
+    <div id="survey">
+      <div class="header">
+        <button type="button" class="close" onclick="myFunction()">×</button>
+      </div> 
+      <div class="container">
+        <div class="alert alert-success hide">
+          <h3>Thank you!</h3>
+          <p>
+            Your information was submitted<br> successfully. We will now connect you<br> to the next available chat agent.
+          </p> 
+        </div>
+        <div id="basicInfo">
+          <div class="toggleContentInnerSec"> 
+            <div class="row-fluid">
+              <div class="span7">
+                <form class="form-horizontal" action="survey.php" method="post" id="reg_form" novalidate="novalidate">
+                  <h3>How can we help you?</h3>
+                    <div class="form-group">
+                      <label id="fullname">* Full Name</label> 
+                      <input type="text" placeholder="John Doe"> 
+                    </div>
+                    <div class="form-group">
+                      <label id="phonenumber">* Phone Number</label>
+                      <p class="hide lastNameErrorMsg error">* Phone Number - invalid phone number</p> 
+                      <input id="phone" type="tel"  value="" class="access required" placeholder="1(123)456-7890" data-errormsg="lastNameErrorMsg">
+                    </div>
+                    <div class="form-group">
+                      <label>* Please select a state</label>
+                     <select  class="custom-select">
+                      <option value="">Please select a state</option>
+                       <option value="Alabama">Alabama</option>
+                       <option value="Alaska">Alaska</option>
+                       <option value="Arizona">Arizona</option>
+                       <option value="Arkansas">Arkansas</option>
+                       <option value="California">California</option>
+                       <option value="Colorado">Colorado</option>
+                       <option value="Connecticut">Connecticut</option>
+                       <option value="Delaware">Delaware</option>
+                       <option value="District of Columbia">District of Columbia</option>
+                       <option value="Florida">Florida</option>
+                       <option value="Georgia">Georgia</option>
+                       <option value="Hawaii">Hawaii</option>
+                       <option value="daho">daho</option>
+                       <option value="Illinois">Illinois</option>
+                       <option value="Indiana">Indiana</option>
+                       <option value="Iowa">Iowa</option>
+                       <option value="Kansas">Kansas</option>
+                       <option value="Kentucky">Kentucky</option>
+                       <option value="Louisiana">Louisiana</option>
+                       <option value="Maine">Maine</option>
+                       <option value="Maryland">Maryland</option>
+                       <option value="Mass">Mass</option>
+                       <option value="Michigan">Michigan</option>
+                       <option value="Minnesota">Minnesota</option>
+                       <option value="Mississippi">Mississippi</option>
+                       <option value="Missouri">Missouri</option>
+                       <option value="Montana">Montana</option>
+                       <option value="Nebraska">Nebraska</option>
+                       <option value="Nevada">Nevada</option>
+                       <option value="New Hampshire">New Hampshire</option>
+                       <option value="New Jersey">New Jersey</option>
+                       <option value="New Mexico">New Mexico</option>
+                       <option value="New York">New York</option>
+                       <option value="North Carolina">North Carolina</option>
+                       <option value="North Dakota">North Dakota</option>
+                       <option value="Ohio">Ohio</option>
+                       <option value="Oklahoma">Oklahoma</option>
+                       <option value="Oregon">Oregon</option>
+                       <option value="Pennsylvania">Pennsylvania</option>
+                       <option value="Rhode Island">Rhode Island</option>
+                       <option value="South Carolina">South Carolina</option>
+                       <option value="South Dakota">South Dakota</option>
+                       <option value="Tennessee">Tennessee</option>
+                       <option value="Texas">Texas</option>
+                       <option value="Uttah">Uttah</option>
+                       <option value="Vermont">Vermont</option>
+                       <option value="Virginia">Virginia</option>
+                       <option value="Washington">Washington</option>
+                       <option value="est Virginia">West Virginia</option>
+                       <option value="Wisconsin">Wisconsin</option>
+                       <option value="Wyoming">Wyoming</option>
+                     </select>
+                   </div>
+                   <div class="form-group">
+                    <label id="question">* Please describe your question</label>
+                    <textarea id="comment"></textarea>
+                    <div id='clickout'>
+                      <a class="btn btn-primary btn-med" id="tabOneSubmit">Submit</a>
+                      <br>
+                      <span id="required">* required field</span>
+                    </div>
+                  </div>
+                </form>
+              </div>  
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="footer">Powered By Nuance</div>
+    </div>
+    <!-- You shouldn't need to change any of the code below here -->
+    <header>
+      <img src="./images/logo.png">
+    </header>
+    <main>
+      <div class="masthead">
+        <h2>Drive documentation productivity.</h2>
+        <h3>Learn More</h3>
+      </div>
+      <div class="content">
+        <h4>Lorem Ipsum</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam hendrerit, elit venenatis efficitur tempor, massa massa ultricies dolor, nec blandit dui sapien sed mi. Nam id nibh malesuada, pharetra arcu eget, pulvinar dui. Pellentesque sit amet gravida justo. Pellentesque varius purus quis mattis ullamcorper. Nulla felis metus, ornare vitae aliquet sodales, congue et justo. Nulla egestas ex quis luctus aliquet. Praesent suscipit vehicula risus, sed consequat ante malesuada sed. In quis suscipit sapien, eu blandit diam. Morbi volutpat erat purus. Pellentesque vitae pellentesque tortor. In vel tortor porta, egestas ante in, accumsan lorem. Aenean gravida rhoncus elit a iaculis.</p>
+        <p>Vestibulum vitae nulla quis urna blandit rutrum. Sed id luctus est, a laoreet nisl. Aenean nec quam eu lectus pharetra hendrerit a vel metus. Duis vitae elit nibh. Nunc et nulla ultricies est dictum ornare at quis purus. Phasellus at nisl mauris. Nam nec turpis in lacus lacinia posuere. Morbi velit orci, gravida vel ornare at, varius in nulla. Aliquam iaculis, elit convallis laoreet accumsan, tellus sapien lacinia augue, id porttitor mi turpis at sem. Cras posuere elit non augue lobortis molestie. Proin sit amet mi lacus.</p>
+        <p>Sed id odio a magna facilisis viverra. Nam nec faucibus est. Nulla luctus turpis in sodales dictum. Proin eleifend ultricies luctus. Praesent ut arcu vel arcu tristique egestas. Vivamus fringilla id arcu sed dictum. Morbi luctus faucibus consectetur. Fusce ac velit iaculis, convallis ipsum quis, dictum diam. Morbi sit amet sem at sem fermentum gravida. Suspendisse in tellus vulputate, posuere urna interdum, lacinia erat. Fusce nec sem cursus, dictum dolor id, convallis erat. Mauris at dui et elit eleifend ullamcorper. Fusce suscipit purus sit amet diam rhoncus dapibus ut at eros. Praesent commodo dolor accumsan quam euismod tristique. Maecenas luctus nulla ex, eget aliquet nisl ornare ut.</p>
+        <p>Integer ut efficitur lorem, a condimentum massa. Morbi eget mattis erat. Nulla eleifend urna in tristique tincidunt. Pellentesque eu finibus libero, at euismod velit. Nullam ac orci lacinia, pulvinar risus vitae, porttitor erat. Aenean pretium lectus sit amet laoreet ultrices. Fusce mattis gravida enim, nec egestas libero porta eu. Aliquam lorem urna, gravida pretium dapibus quis, facilisis non massa. Suspendisse et efficitur arcu.</p>
+        <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam a est ac odio facilisis facilisis. Maecenas porta gravida quam, ut vehicula dolor tincidunt a. Nullam dictum ante eget eros pretium maximus. Cras tincidunt sagittis velit, non convallis dolor tincidunt ut. Vestibulum posuere lobortis nisl in bibendum. Morbi vehicula eros mi, eget scelerisque dui pulvinar vel. Duis accumsan ligula eu vulputate imperdiet. Nullam viverra sapien id orci malesuada placerat. Vestibulum pulvinar egestas venenatis. Cras velit lorem, condimentum sed iaculis consequat, volutpat at ante. Phasellus eu malesuada dui. Nulla non libero dui.</p>
+      </div>
+    </main>
+    <footer>
+      &copy; 2017 Nuance Communications, Inc.
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/remvsurvey.js"></script>
+    <script src="js/phonevalidate.js"></script>
+    <script src="js/remvsurvey.js"></script>
+  </body>
+</html>
